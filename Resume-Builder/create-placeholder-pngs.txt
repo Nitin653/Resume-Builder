@@ -1,0 +1,29 @@
+# Creating Placeholder PNG Files
+
+If you need placeholder PNG files for the templates before using the converter tool, you can create them with the following steps:
+
+## Option 1: Using the SVG files directly
+Modern browsers can display SVG files directly. You can temporarily rename the SVG files to PNG in your HTML code until you generate the actual PNG files:
+
+```html
+<!-- Example: Temporarily use SVG files with PNG extension in HTML -->
+<img src="assets/images/template-professional.svg" alt="Professional Template">
+```
+
+## Option 2: Create simple colored rectangles
+You can create simple colored rectangles as placeholders using any image editing software:
+
+1. Create a new image with dimensions 300x400 pixels
+2. Fill with a solid color:
+   - Professional: #2c3e50 (dark blue)
+   - Modern: #1a237e (indigo)
+   - Creative: #6200ea (purple)
+   - Simple: #455a64 (slate)
+3. Save as PNG with the appropriate name:
+   - template-professional.png
+   - template-modern.png
+   - template-creative.png
+   - template-simple.png
+
+## Option 3: Use the converter tool
+The recommended approach is to use the converter tool (convert-templates.html) to generate proper PNG files from the SVG templates. 

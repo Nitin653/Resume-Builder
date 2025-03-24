@@ -1,0 +1,378 @@
+/* Dark Mode Styles */
+:root {
+    --primary-color-rgb: 67, 97, 238;
+    --secondary-color-rgb: 76, 201, 240;
+    --accent-color-rgb: 247, 37, 133;
+}
+
+body.dark-mode {
+    --text-color: #ffffff;
+    --text-light: #d1d5db;
+    --text-light-dark: #e2e8f0;
+    --background-color: #121417;
+    --background-light: #1f2937;
+    --background-dark: #111827;
+    --border-color: #374151;
+    --primary-color-rgb: 76, 201, 240;
+    --glass-bg: rgba(31, 41, 55, 0.98);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode::before {
+    background: 
+        radial-gradient(circle at 0% 0%, rgba(67, 97, 238, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(247, 37, 133, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(76, 201, 240, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(255, 158, 0, 0.1) 0%, transparent 50%);
+}
+
+body.dark-mode header {
+    background: var(--glass-bg);
+    border-bottom: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+body.dark-mode .builder-container,
+body.dark-mode .sidebar,
+body.dark-mode .editor,
+body.dark-mode .modal-content,
+body.dark-mode .tip-card,
+body.dark-mode .template-card,
+body.dark-mode .template-option {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+body.dark-mode .preview-container {
+    background-color: var(--background-dark);
+}
+
+body.dark-mode .resume-preview {
+    background-color: var(--background-light);
+    box-shadow: var(--glass-shadow);
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea, 
+body.dark-mode select {
+    background: var(--glass-bg);
+    color: var(--text-color);
+    border: var(--glass-border);
+    font-weight: 400;
+}
+
+body.dark-mode input:focus, 
+body.dark-mode textarea:focus, 
+body.dark-mode select:focus {
+    box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
+    background: rgba(76, 201, 240, 0.1);
+}
+
+body.dark-mode input::placeholder, 
+body.dark-mode textarea::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .tip-icon {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.1));
+}
+
+body.dark-mode .tip-icon i {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .sections-nav ul li {
+    color: var(--text-color);
+}
+
+body.dark-mode .sections-nav ul li:hover {
+    background: rgba(76, 201, 240, 0.15);
+}
+
+body.dark-mode .sections-nav ul li.active {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.9), rgba(247, 37, 133, 0.9));
+    color: #ffffff;
+    font-weight: 500;
+}
+
+body.dark-mode label,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+    color: var(--text-color);
+}
+
+body.dark-mode .text-light {
+    color: var(--text-light);
+}
+
+body.dark-mode a:not(.btn) {
+    color: #60a5fa;
+}
+
+body.dark-mode a:not(.btn):hover {
+    color: #93c5fd;
+}
+
+body.dark-mode .primary-btn {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
+}
+
+body.dark-mode .primary-btn:hover {
+    box-shadow: 0 6px 20px rgba(76, 201, 240, 0.4);
+}
+
+body.dark-mode .secondary-btn {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .secondary-btn:hover {
+    background: rgba(76, 201, 240, 0.1);
+}
+
+body.dark-mode .icon-btn {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    color: var(--text-color);
+}
+
+body.dark-mode .icon-btn:hover {
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--secondary-color);
+}
+
+/* Enhanced dark mode transitions */
+body.dark-mode * {
+    transition: background-color 0.5s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                opacity 0.5s ease,
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode specific animations */
+body.dark-mode .hero::before {
+    background: var(--secondary-color);
+    opacity: 0.05;
+}
+
+body.dark-mode .hero::after {
+    background: var(--accent-color);
+    opacity: 0.05;
+}
+
+body.dark-mode .loading::after {
+    background: linear-gradient(90deg, transparent, rgba(76, 201, 240, 0.1), transparent);
+}
+
+/* Dark mode hover effects */
+body.dark-mode .template-card:hover,
+body.dark-mode .tip-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+body.dark-mode .template-option:hover {
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    background: rgba(76, 201, 240, 0.1);
+}
+
+/* Dark mode footer */
+body.dark-mode footer {
+    background-color: var(--background-dark);
+    border-top: var(--glass-border);
+}
+
+body.dark-mode .theme-toggle .fa-moon,
+body.dark-mode .theme-toggle .fa-sun {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode styles for ATS Resume Analyzer */
+body.dark-mode .analyzer-section::before {
+    background-image: linear-gradient(135deg, rgba(76, 201, 240, 0.05) 0%, rgba(247, 37, 133, 0.05) 100%);
+}
+
+body.dark-mode .upload-area {
+    background: var(--glass-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .upload-area:hover {
+    border-color: var(--secondary-color);
+}
+
+body.dark-mode .upload-area.drag-over {
+    background: rgba(76, 201, 240, 0.1);
+    border-color: var(--secondary-color);
+}
+
+body.dark-mode .upload-area i {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .score-circle {
+    background: conic-gradient(var(--secondary-color) 0%, var(--accent-color) 0%, var(--background-dark) 0%);
+}
+
+body.dark-mode .score-circle::before {
+    background: var(--glass-bg);
+}
+
+body.dark-mode .keyword-matches, 
+body.dark-mode .format-analysis, 
+body.dark-mode .content-analysis, 
+body.dark-mode .improvement-suggestions {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .keyword-item,
+body.dark-mode .format-item,
+body.dark-mode .suggestion-item {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .keyword-item:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .tab-btn {
+    color: var(--text-light);
+}
+
+body.dark-mode .tab-btn:hover,
+body.dark-mode .tab-btn.active {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .tab-btn.active {
+    border-bottom-color: var(--secondary-color);
+}
+
+body.dark-mode .suggestion-item {
+    border-left-color: var(--secondary-color);
+}
+
+body.dark-mode .suggestion-item h5 {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .suggestion-example {
+    background: rgba(76, 201, 240, 0.1);
+}
+
+body.dark-mode .info-icon {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.1), rgba(247, 37, 133, 0.1));
+}
+
+/* Add styles to ensure text in templates section is visible in dark mode */
+[data-theme="dark"] .templates-section h2,
+[data-theme="dark"] .templates-section p {
+    color: var(--text-light-dark);
+}
+
+[data-theme="dark"] .template-card {
+    background: var(--dark-glass-bg);
+    border-color: var(--dark-glass-border);
+}
+
+[data-theme="dark"] .template-info {
+    background: var(--dark-glass-bg);
+}
+
+[data-theme="dark"] .template-info h3,
+[data-theme="dark"] .template-info p {
+    color: var(--text-light-dark);
+}
+
+/* Ensure tips section text is also visible in dark mode */
+[data-theme="dark"] .tips-section h2,
+[data-theme="dark"] .tips-section > p {
+    color: var(--text-light-dark);
+}
+
+[data-theme="dark"] .tip-card {
+    background: var(--dark-glass-bg);
+    border-color: var(--dark-glass-border);
+}
+
+[data-theme="dark"] .tip-card h3,
+[data-theme="dark"] .tip-card p {
+    color: var(--text-light-dark);
+}
+
+/* Ensure section titles are visible in dark mode */
+[data-theme="dark"] .section-title {
+    color: var(--text-light-dark);
+}
+
+/* Templates section dark mode styles */
+body.dark-mode .templates-section {
+    background-color: var(--background-color);
+}
+
+body.dark-mode .templates-section h2 {
+    color: var(--text-light-dark);
+}
+
+body.dark-mode .templates-section p {
+    color: var(--text-light);
+}
+
+body.dark-mode .template-card {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+body.dark-mode .template-info {
+    background: var(--glass-bg);
+}
+
+body.dark-mode .template-info h3 {
+    color: var(--text-light-dark);
+}
+
+body.dark-mode .template-info p {
+    color: var(--text-light);
+}
+
+/* Tips section dark mode styles */
+body.dark-mode .tips-section {
+    background-color: var(--background-color);
+}
+
+body.dark-mode .tips-section h2 {
+    color: var(--text-light-dark);
+}
+
+body.dark-mode .tips-section > p {
+    color: var(--text-light);
+}
+
+body.dark-mode .tip-card h3 {
+    color: var(--text-light-dark);
+}
+
+body.dark-mode .tip-card p {
+    color: var(--text-light);
+}
+
+/* Section titles dark mode styles */
+body.dark-mode .section-title {
+    color: var(--text-light-dark);
+} 

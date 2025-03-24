@@ -1,0 +1,22 @@
+# Template Image Generation
+
+The SVG template illustrations have been created for each resume template:
+- template-professional.svg
+- template-modern.svg
+- template-creative.svg
+- template-simple.svg
+
+To generate PNG versions of these templates for use in the application:
+
+1. Open the `convert-templates.html` file in a web browser
+2. For each template, click the "Convert to PNG" button
+3. Download the generated PNG file
+4. Place the downloaded PNG files in the `assets/images/` directory
+
+This process will create the following files:
+- template-professional.png
+- template-modern.png
+- template-creative.png
+- template-simple.png
+
+These PNG files are referenced in the `templates.js` file for displaying template previews in the UI. 
